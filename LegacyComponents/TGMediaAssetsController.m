@@ -364,7 +364,7 @@
     if (_selectionContext.allowGrouping)
     {
         [_toolbarView setCenterButtonImage:TGTintedImage(TGComponentsImageNamed(@"MediaPickerGroupPhotosIcon"), _pallete != nil ? _pallete.secondaryTextColor : UIColorRGB(0x858e99))];
-        [_toolbarView setCenterButtonSelectedImage:_pallete != nil ? TGTintedImage(TGComponentsImageNamed(@"MediaPickerGroupPhotosIcon"), _pallete.accentColor) : TGComponentsImageNamed(@"MediaPickerGroupPhotosIcon")];
+        [_toolbarView setCenterButtonSelectedImage:_pallete != nil ? TGTintedImage(TGComponentsImageNamed(@"MediaPickerGroupPhotosIcon"), _pallete.secondaryAccentColor) : TGComponentsImageNamed(@"MediaPickerGroupPhotosIcon")];
         [_toolbarView setCenterButtonHidden:true animated:false];
         [_toolbarView setCenterButtonSelected:_selectionContext.grouping];
         
@@ -1204,7 +1204,7 @@
 
 @implementation TGMediaAssetsPallete
 
-+ (instancetype)palleteWithDark:(bool)dark backgroundColor:(UIColor *)backgroundColor selectionColor:(UIColor *)selectionColor separatorColor:(UIColor *)separatorColor textColor:(UIColor *)textColor secondaryTextColor:(UIColor *)secondaryTextColor accentColor:(UIColor *)accentColor barBackgroundColor:(UIColor *)barBackgroundColor barSeparatorColor:(UIColor *)barSeparatorColor navigationTitleColor:(UIColor *)navigationTitleColor badge:(UIImage *)badge badgeTextColor:(UIColor *)badgeTextColor sendIconImage:(UIImage *)sendIconImage maybeAccentColor:(UIColor *)maybeAccentColor
++ (instancetype)palleteWithDark:(bool)dark backgroundColor:(UIColor *)backgroundColor selectionColor:(UIColor *)selectionColor separatorColor:(UIColor *)separatorColor textColor:(UIColor *)textColor secondaryTextColor:(UIColor *)secondaryTextColor accentColor:(UIColor *)accentColor secondaryAccentColor:(UIColor *)secondaryAccentColor barBackgroundColor:(UIColor *)barBackgroundColor barSeparatorColor:(UIColor *)barSeparatorColor navigationTitleColor:(UIColor *)navigationTitleColor badge:(UIImage *)badge badgeTextColor:(UIColor *)badgeTextColor sendIconImage:(UIImage *)sendIconImage maybeAccentColor:(UIColor *)maybeAccentColor
 {
     TGMediaAssetsPallete *pallete = [[TGMediaAssetsPallete alloc] init];
     pallete->_isDark = dark;
@@ -1214,6 +1214,7 @@
     pallete->_textColor = textColor;
     pallete->_secondaryTextColor = secondaryTextColor;
     pallete->_accentColor = accentColor;
+    pallete->_secondaryAccentColor = secondaryAccentColor;
     pallete->_barBackgroundColor = barBackgroundColor;
     pallete->_barSeparatorColor = barSeparatorColor;
     pallete->_navigationTitleColor = navigationTitleColor;

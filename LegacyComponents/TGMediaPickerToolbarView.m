@@ -93,8 +93,8 @@ const CGFloat TGMediaPickerToolbarHeight = 44.0f;
     self.backgroundColor = pallete.barBackgroundColor;
     _separatorView.backgroundColor = pallete.barSeparatorColor;
     
-    [_leftButton setTitleColor:pallete.accentColor];
-    [_rightButton setTitleColor:pallete.accentColor];
+    [_leftButton setTitleColor:pallete.secondaryAccentColor];
+    [_rightButton setTitleColor:pallete.secondaryAccentColor];
     
     _countBadge.image = pallete.badge;
     _countLabel.textColor = pallete.badgeTextColor;
